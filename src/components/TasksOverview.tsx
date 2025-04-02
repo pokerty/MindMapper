@@ -2,6 +2,7 @@ import React from 'react';
 import { useGoalStore } from '../store/goalStore';
 import { Step, Goal } from '../types';
 import { GoalMatrix } from './GoalMatrix'; // Assuming we want to reuse/adapt this
+import { Link } from 'react-router-dom';
 
 // Define an extended type for steps that includes goal context
 interface StepWithContext extends Step {
@@ -60,12 +61,16 @@ export function TasksOverview() {
             <div className="space-y-2">
               {stepsByCategory[quad.id].length > 0 ? (
                 stepsByCategory[quad.id].map((step: StepWithContext) => (
-                   // Basic step display - can be enhanced
-                  <div key={step.id} className="p-2 bg-white dark:bg-gray-700 rounded shadow-sm">
+                   // Wrap task display in a Link
+                  <Link
+                    to={`/task/${step.id}`}
+                    key={step.id}
+                    className="block p-2 bg-white dark:bg-gray-700 rounded shadow-sm hover:shadow-md transition-shadow duration-150"
+                  >
                      <p className="font-medium text-gray-900 dark:text-gray-100">{step.title}</p>
                      <p className="text-sm text-gray-500 dark:text-gray-400">From Goal: {step.goalTitle}</p>
                      <p className="text-xs text-gray-400 dark:text-gray-500">Status: {step.status}</p>
-                  </div>
+                   </Link>
                 ))
               ) : (
                 <p className="text-sm text-gray-500 dark:text-gray-400">No tasks in this category.</p>

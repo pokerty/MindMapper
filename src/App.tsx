@@ -6,6 +6,7 @@ import { AddGoalForm } from './components/AddGoalForm';
 import { MindfulnessExercises } from './components/MindfulnessExercises';
 import { GoalDetail } from './components/GoalDetail';
 import { TasksOverview } from './components/TasksOverview';
+import { TaskDetail } from './components/TaskDetail';
 import { useThemeStore } from './stores/themeStore';
 
 function App() {
@@ -101,6 +102,8 @@ function App() {
           <Route path="/goal/:goalId" element={<GoalDetail />} />
 
           <Route path="/tasks" element={<TasksOverview />} />
+
+          <Route path="/task/:taskId" element={<TaskDetail />} />
 
           <Route path="/mindfulness" element={<MindfulnessExercises />} />
 

@@ -1,9 +1,8 @@
 # MindMapper 🧠✨
 
 MindMapper is a web application designed to help you organize your goals, manage tasks effectively using the Eisenhower Matrix, and practice mindfulness exercises. Stay focused, prioritize efficiently, and cultivate mental clarity.
+![image](https://github.com/user-attachments/assets/860c1090-97a5-49b1-a121-2be8d25e35ac)
 
-![MindMapper Tasks Overview Demo](./assets/mindmapper-demo.png)
-*(Replace the path above with the actual path or URL to your demo image)*
 
 ## Features
 
